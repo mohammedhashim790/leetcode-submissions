@@ -1,12 +1,6 @@
 class Solution {
 
-    static{
-        for(int i = 0 ;i < 100;i++){
-            firstMissingPositive(new int[]{1,2,3,4,4});
-        }
-    }
-
-    public static int firstMissingPositive(int[] nums) {
+    public int firstMissingPositive(int[] nums) {
 
         // int res = 0;
         // int min = Integer.MAX_VALUE;
