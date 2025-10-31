@@ -1,5 +1,12 @@
 class Solution {
-    public List<Integer> findDuplicates(int[] nums) {
+
+    static{
+        for(int i = 0 ;i < 100;i++){
+            findDuplicates(new int[]{1,2,3,3,4,2});
+        }
+    }
+
+    public static List<Integer> findDuplicates(int[] nums) {
         List<Integer> res = new ArrayList<Integer>();
         for(int num:nums){
             int index = Math.abs(num) - 1;
