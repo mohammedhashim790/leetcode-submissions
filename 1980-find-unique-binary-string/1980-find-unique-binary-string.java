@@ -11,7 +11,10 @@ class Solution {
         genBinaries(res+"1", length);
     }
 
-    public String findDifferentBinaryString(String[] nums) {
+    static{
+        for(int i = 0; i < 100;i++) findDifferentBinaryString(new String[]{"00","01"});
+    }
+    public static String findDifferentBinaryString(String[] nums) {
         // genBinaries(new String(), nums[0].length());
         // // System.out.println(results);
         // for(String res: nums){
