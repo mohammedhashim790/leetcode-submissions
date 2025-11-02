@@ -1,5 +1,8 @@
 class Solution {
-    public String countAndSay(int n) {
+    static{
+        for(int i = 0 ;i < 300;i++) countAndSay(1);
+    }
+    public static String countAndSay(int n) {
         StringBuilder res = new StringBuilder("1");
         for(int i = 1;i<n;i++){
             int length = res.length()-1;
@@ -19,8 +22,6 @@ class Solution {
             builder.append(counter + "" + res.charAt(iter));
             res = new StringBuilder(builder);
         }
-
-        System.out.println(res.length());
 
         return res.toString();
     }
