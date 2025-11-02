@@ -9,15 +9,16 @@
  * }
  */
 class Solution {
+    
     public ListNode modifiedList(int[] nums, ListNode head) {
-        HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
+        Set<Integer> map = new HashSet<Integer>();
         for(int num:nums){
-            map.put(num, map.getOrDefault(num, 0) + 1);
+            map.add(num);
         }
         ListNode temp = new ListNode(-1);
         ListNode res = temp;
         while(head!=null){
-            if(map.getOrDefault(head.val, -1)==-1){
+            if(!map.contains(head.val)){
                 temp.next = new ListNode(head.val);
                 temp = temp.next;
             }
