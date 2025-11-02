@@ -1,7 +1,7 @@
 class Solution {
     final static HashMap<Integer,String> map = new HashMap<Integer, String>();
     static{
-        for(int i = 1 ;i<=30;i++) countAndSay(i);
+        for(int i = 15 ;i<=30;i++) countAndSay(i);
     }
     public static String countAndSay(int n) {
 
@@ -28,6 +28,6 @@ class Solution {
             res = new StringBuilder(builder);
         }
         map.put(n, res.toString());
-        return "";
+        return res.toString();
     }
 }
