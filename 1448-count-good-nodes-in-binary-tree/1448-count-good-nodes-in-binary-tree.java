@@ -19,7 +19,9 @@ class Solution {
     public int goodNodes(TreeNode root) {
         
         Queue<Object[]> q = new LinkedList<Object[]>();
-        List<Integer> nums = new ArrayList<Integer>();
+        // List<Integer> nums = new ArrayList<Integer>();
+
+        int counter = 0;
 
         q.offer(new Object[]{root, Integer.MIN_VALUE});
 
@@ -31,18 +33,17 @@ class Solution {
                 TreeNode node = (TreeNode) obj[0];
 
                 if(node.val >= max){
-                    nums.add(node.val);
+                    // nums.add(node.val);
+                    counter++;
                     max = node.val;
                 }
-
                 if(node.left!=null) q.offer(new Object[]{node.left,max});
                 if(node.right!=null) q.offer(new Object[]{node.right,max});
 
             }
-
         }
 
-        return nums.size();
+        return counter;
     }
 
     // public void traverse(TreeNode root, int max){
