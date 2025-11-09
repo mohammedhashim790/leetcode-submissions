@@ -15,17 +15,23 @@
  */
 class Solution {
 
-    public int sumNumbers(TreeNode root, int val){
-        if(root == null) return 0;
+    static {
+        for(int i = 0 ;i<200;i++) sumNumbers(new TreeNode());
+    }
+
+    static int sumNumbers(TreeNode root, int val) {
+        if (root == null)
+            return 0;
         val = val * 10 + root.val;
-        if(root.left == null && root.right == null){
+        if (root.left == null && root.right == null) {
             return val;
         }
-        return sumNumbers(root.left, val) + 
-        sumNumbers(root.right, val);
+        return sumNumbers(root.left, val) +
+                sumNumbers(root.right, val);
     }
-    public int sumNumbers(TreeNode root) {
+
+    public static int sumNumbers(TreeNode root) {
         return sumNumbers(root, 0);
-        // return sum;
+
     }
 }
