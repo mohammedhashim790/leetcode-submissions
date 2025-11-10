@@ -21,14 +21,18 @@ class Solution {
 
         if(root == null) return ;
 
+        int len = str.length();
+
         if(root.left==null && root.right == null) {
             str.append(root.val);
             res.add(str.toString());
         }
         else str.append(root.val + "->");
 
-        traverse(root.left, new StringBuilder(str));
-        traverse(root.right, new StringBuilder(str));
+        traverse(root.left, str);
+        traverse(root.right, str);
+
+        str.setLength(len);
 
     }
 
