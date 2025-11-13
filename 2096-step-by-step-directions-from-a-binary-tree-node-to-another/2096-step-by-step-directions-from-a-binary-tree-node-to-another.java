@@ -32,9 +32,11 @@ class Solution {
         StringBuilder right = new StringBuilder();
         find(root, p, left);
         find(root, q, right);
-        int i = 0, max_i = Math.min(left.length(), right.length());
-        while (i < max_i && left.charAt(left.length() - i - 1) == right.charAt(right.length() - i - 1))
-            ++i;
+        int i = 0, min = Math.min(left.length(), right.length());
+        while (i < min && left.charAt(left.length() - i - 1) == right.charAt(right.length() - i - 1)){
+            i++;
+        }
+        // String res = 
         return "U".repeat(left.length() - i) + right.reverse().toString().substring(i);
     }
 }
