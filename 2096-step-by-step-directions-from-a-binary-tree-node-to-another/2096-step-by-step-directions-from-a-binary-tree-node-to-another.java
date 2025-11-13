@@ -15,6 +15,24 @@
  */
 class Solution {
 
+    void inOrder(TreeNode root){
+        if(root!=null){
+            inOrder(root.left);
+            System.out.println(root.val);
+            inOrder(root.right);
+        }
+    }
+
+    void preOrder(TreeNode root){
+        if(root!=null){
+            System.out.println(root.val);
+            preOrder(root.left);
+            preOrder(root.right);
+        }
+    }
+
+    
+
     public boolean find(TreeNode root, int val, StringBuilder str){
         if(root.val == val) return true;
 
@@ -32,14 +50,19 @@ class Solution {
     public String getDirections(TreeNode root, int p, int q) {
         StringBuilder left = new StringBuilder();
         StringBuilder right = new StringBuilder();
+
+        // inOrder(root);
+        // System.out.println("*".repeat(10));
+        // preOrder(root);
+
         find(root, p, left);
         find(root, q, right);
 
-        System.out.println(left);
-        System.out.println(right);
+        // System.out.println(left);
+        // System.out.println(right);
 
 
-        // return "";
+        return "";
 
         int i = 0, min = Math.min(left.length(), right.length());
         while (i < min && left.charAt(left.length() - i - 1) == right.charAt(right.length() - i - 1)){
