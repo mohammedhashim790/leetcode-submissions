@@ -19,10 +19,12 @@ class Solution {
         if(root.val == val) return true;
 
         if(root.left!=null && find(root.left, val, str)){
-            str.append("L");
+            str.append(String.valueOf("L" ));
+            // + root.val + "->"
         }
         else if(root.right!=null && find(root.right, val, str)){
-            str.append("R");
+            str.append(String.valueOf("R" ));
+            // + root.val + "->"
         }
 
         return str.length() > 0;
@@ -32,6 +34,13 @@ class Solution {
         StringBuilder right = new StringBuilder();
         find(root, p, left);
         find(root, q, right);
+
+        System.out.println(left);
+        System.out.println(right);
+
+
+        // return "";
+
         int i = 0, min = Math.min(left.length(), right.length());
         while (i < min && left.charAt(left.length() - i - 1) == right.charAt(right.length() - i - 1)){
             i++;
