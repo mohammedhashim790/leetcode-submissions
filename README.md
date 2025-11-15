@@ -1,2 +1,5 @@
 # leetcode-submissions
 Collection of LeetCode questions to ace the coding interview! - Created using [LeetHub-3.0](https://github.com/raphaelheinz/LeetHub-3.0)
+
+
+[Style](0236-lowest-common-ancestor-of-a-binary-tree)
