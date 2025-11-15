@@ -3,3 +3,4 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 
 
 # Problems Solved
+- [0001-two-sum](/0001-two-sum)
