@@ -3,6 +3,3 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 
 
 [0236-lowest-common-ancestor-of-a-binary-tree](0236-lowest-common-ancestor-of-a-binary-tree)
-
-
-# Updated by LeetHub Script
