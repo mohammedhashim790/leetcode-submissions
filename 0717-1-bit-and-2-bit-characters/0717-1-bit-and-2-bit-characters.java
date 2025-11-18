@@ -1,5 +1,5 @@
 class Solution {
-    public boolean isOneBitCharacter(int[] b) {
+    public static boolean isOneBitCharacter(int[] b) {
         int l = b.length;
 
         for(int i = 0 ; i < l - 1;i++){
