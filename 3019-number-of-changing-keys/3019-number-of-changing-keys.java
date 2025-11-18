@@ -6,7 +6,7 @@ class Solution {
 
         for(int i = 1 ; i < s.length();i++){
             Character ch = Character.toLowerCase(s.charAt(i));
-            System.out.println(ch + " " + prev + " " + prev.equals(ch));
+
             if(!prev.equals(ch)){
                 prev = ch;
                 counter++;
